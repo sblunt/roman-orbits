@@ -70,11 +70,6 @@ params = anybasis_params.basis.to_any_basis(anybasis_params,fitting_basis)
 #params['tc2'].vary = False
 #params['per2'].vary = False
 #params['k2'].vary = False
-#params['secosw3'].vary = False
-#params['sesinw3'].vary = False
-#params['tc3'].vary = False
-#params['per3'].vary = False
-#params['k3'].vary = False
 params['dvdt'].vary = False
 params['curv'].vary = False
 
