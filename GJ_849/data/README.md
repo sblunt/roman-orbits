@@ -7,7 +7,7 @@ as possible.
 ### Data Sources:
 1. HARPS data, including both pre- and post-upgrade data, in the "HARPS_rv_raw.txt" file, taken from the HARPS RVbank (Trifonov et al. 2020) (https://www2.mpia-hd.mpg.de/homes/trifonov/HARPS_RVBank.html).
 2. HARPS-N data, in the "HARPS-N_rv_raw.txt" file, taken from Vizier (Pinamonti et al. 2023) (https://ui.adsabs.harvard.edu/abs/2023A%26A...677A.122P/abstract).
-3. HIRES data, including both pre- and post-upgrade data, in the "HIRES_rv_raw.txt" file, taken from Table 6 of Rosenthal et al. 2021 (https://iopscience.iop.org/article/10.3847/1538-4365/abe23c/meta#apjsabe23ct6).
+3. Keck-HIRES data, including both pre- and post-upgrade data, in the "HIRES_rv_raw.txt" file, taken from Table 6 of Rosenthal et al. 2021 (https://iopscience.iop.org/article/10.3847/1538-4365/abe23c/meta#apjsabe23ct6).
 4. CARMENES data, in the "CARMENES_rv_raw.csv" file, taken from CARMENES DR 1 (Ribas et al. 2023) (http://carmenes.cab.inta-csic.es/gto/jsp/dr1Public.jsp).
 
 Master data files are concatenated data including all sources, cleaned and formatted for radvel as input.
