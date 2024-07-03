@@ -14,11 +14,11 @@ Created on Tue Jul  2 12:12:20 2024
 import pandas as pd
 import radvel
 
-path1 = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/03-GJ849/HARPS_rv_raw.txt'
-path2 = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/03-GJ849/HARPS-N_rv_raw.txt'
-path3 = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/03-GJ849/HIRES_rv_raw.txt'
-path4 = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/03-GJ849/CARMENES_rv_raw.csv'
-savepath = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/03-GJ849/'
+path1 = 'path/HARPS_rv_raw.txt'
+path2 = 'path/HARPS-N_rv_raw.txt'
+path3 = 'path/HIRES_rv_raw.txt'
+path4 = 'path/CARMENES_rv_raw.csv'
+savepath = 'path/'
 
 # set nightly binning option
 binning = 1   # nightly bin, 1 for yes, 2 for no
