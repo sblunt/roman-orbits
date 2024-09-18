@@ -23,7 +23,7 @@ savepath = 'path/'
 binning = 1   # nightly bin, 1 for yes, 2 for no
 
 # UCLES data
-data1 = pd.read_csv(path1,header=None,skiprows=22,delim_whitespace=True,\
+data1 = pd.read_csv(path1,header=None,skiprows=22,sep='\s+',\
                     names=('time','mnvel','errvel'))
 data1['tel'] = 'UCLES'
 
