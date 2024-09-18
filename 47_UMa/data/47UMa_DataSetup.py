@@ -24,7 +24,7 @@ savepath = 'path/'
 binning = 1   # nightly bin, 1 for yes, 2 for no
 
 # ELODIE data
-data1 = pd.read_csv(path1,header=None,skiprows=12,delim_whitespace=True,\
+data1 = pd.read_csv(path1,header=None,skiprows=12,sep='\s+',\
                     usecols=[0,1,2],names=('time','mnvel','errvel'))
 data1['mnvel'] *= 1000
 data1['errvel'] *= 1000
