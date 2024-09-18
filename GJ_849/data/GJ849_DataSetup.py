@@ -24,7 +24,7 @@ savepath = 'path/'
 binning = 1   # nightly bin, 1 for yes, 2 for no
 
 # HARPS pre and post data
-data1 = pd.read_csv(path1,header=None,skiprows=2,delim_whitespace=True,\
+data1 = pd.read_csv(path1,header=None,skiprows=2,sep='\s+',\
                     usecols=[3,4,5],names=('time','mnvel','errvel'))
 data1_pre = data1[data1['time'] < 2457174.5]   # pre-upgrade data
 data1_pre['tel'] = 'HARPS-pre'
