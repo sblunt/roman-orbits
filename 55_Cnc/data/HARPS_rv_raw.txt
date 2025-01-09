@@ -1,0 +1,38 @@
+#RESOURCE=yCat_36190001
+#Name: J/A+A/619/A1
+#Title: 55 Cnc radial velocities and photometry (Bourrier+, 2018)
+#INFO ivoid=ivo://cds.vizier/j/a+a/619/a1     IVOID of underlying data collection     
+#INFO creator=Bourrier V.     First author or institution     
+#INFO cites=bibcode:2018A&A...619A...1B     Article or Data origin sources     
+#INFO editor=Astronomy and Astrophysics     Editor name (article)     
+#INFO original_date=2018     Year of the article publication     
+#INFO reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/619/A1     Dataset landing page     
+#INFO citation=doi:10.26093/cds/vizier.36190001     Dataset identifier that can be used for citation     
+#INFO publication_date=2020-08-11     Date of first publication in the data centre     
+#INFO rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html     Licence URI     
+#Table J_A_A_619_A1_rv55cnc:
+#Name: J/A+A/619/A1/rv55cnc
+#Title: Radial velocities of 55 Cnc with S index
+#---Details of Columns:
+    RJD (d)    (F13.7) Reduced Julian date (JD-2400000) [ucd=time.epoch]
+    RV (m/s)   (F12.5) Radial velocity [ucd=phys.veloc;pos.heliocentric]
+    e_RV (m/s) (F8.5)  Radial velocity photon plus instrument error [ucd=stat.error]
+    Smw        (F9.6)  S Mount Wilson index [ucd=phot.flux;arith.ratio]
+    e_Smw      (F9.6)  S Mount Wilson index error [ucd=stat.error]
+    Inst       (A6)    Name of instrument [ucd=meta.id;instr]
+------------- ------------ -------- --------- --------- ------
+                           e_                                 
+RJD (d)       RV (m/s)     RV (m/s) Smw       e_Smw     Inst  
+------------- ------------ -------- --------- --------- ------
+55954.6837838  27417.08243  0.14512  0.152461  0.000301  HARPS
+55954.7273079  27415.78625  0.14802  0.152285  0.000293  HARPS
+55954.7617114  27414.47713  0.17744  0.152697  0.000355  HARPS
+55971.6489976  27485.23496  0.14064  0.148182  0.000346  HARPS
+55971.6911953  27485.29161  0.14058  0.148219  0.000335  HARPS
+55971.7184470  27484.31473  0.25796  0.148487  0.000616  HARPS
+55985.6177563  27450.68554  0.13869  0.152595  0.000250  HARPS
+55985.6596793  27449.68915  0.13677  0.151858  0.000248  HARPS
+55985.6837350  27448.47000  0.59000  0.150297  0.001112  HARPS
+56002.5610181  27520.30457  0.16238  0.151187  0.000369  HARPS
+56002.6024703  27519.40134  0.17085  0.150289  0.000382  HARPS
+56002.6325277  27518.61386  0.29831  0.151643  0.000683  HARPS

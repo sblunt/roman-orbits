@@ -1,0 +1,64 @@
+#RESOURCE=yCat_36190001
+#Name: J/A+A/619/A1
+#Title: 55 Cnc radial velocities and photometry (Bourrier+, 2018)
+#INFO ivoid=ivo://cds.vizier/j/a+a/619/a1     IVOID of underlying data collection     
+#INFO creator=Bourrier V.     First author or institution     
+#INFO cites=bibcode:2018A&A...619A...1B     Article or Data origin sources     
+#INFO editor=Astronomy and Astrophysics     Editor name (article)     
+#INFO original_date=2018     Year of the article publication     
+#INFO reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/619/A1     Dataset landing page     
+#INFO citation=doi:10.26093/cds/vizier.36190001     Dataset identifier that can be used for citation     
+#INFO publication_date=2020-08-11     Date of first publication in the data centre     
+#INFO rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html     Licence URI     
+#Table J_A_A_619_A1_rv55cnc:
+#Name: J/A+A/619/A1/rv55cnc
+#Title: Radial velocities of 55 Cnc with S index
+#---Details of Columns:
+    RJD (d)    (F13.7) Reduced Julian date (JD-2400000) [ucd=time.epoch]
+    RV (m/s)   (F12.5) Radial velocity [ucd=phys.veloc;pos.heliocentric]
+    e_RV (m/s) (F8.5)  Radial velocity photon plus instrument error [ucd=stat.error]
+    Smw        (F9.6)  S Mount Wilson index [ucd=phot.flux;arith.ratio]
+    e_Smw      (F9.6)  S Mount Wilson index error [ucd=stat.error]
+    Inst       (A6)    Name of instrument [ucd=meta.id;instr]
+------------- ------------ -------- --------- --------- ------
+                           e_                                 
+RJD (d)       RV (m/s)     RV (m/s) Smw       e_Smw     Inst  
+------------- ------------ -------- --------- --------- ------
+55955.3953000  27399.40000  1.90000  0.185000  0.004561 SOPHIE
+55960.5527386  27527.53940  0.50909  0.147891  0.000497 SOPHIE
+55960.5784000  27526.50000  1.20000  0.145300  0.001207 SOPHIE
+55960.6439599  27520.82940  0.56268  0.157056  0.000849 SOPHIE
+55960.6808666  27520.46228  0.95385  0.200344  0.001992 SOPHIE
+55961.4622280  27521.43416  1.03602  0.165746  0.003743 SOPHIE
+55963.4908542  27487.97541  0.50244  0.142722  0.000453 SOPHIE
+55963.5206045  27487.43802  0.88176  0.145468  0.000850 SOPHIE
+55963.5927538  27479.22285  0.55691  0.153270  0.000728 SOPHIE
+55963.6217000  27475.40000  1.30000  0.164100  0.001617 SOPHIE
+55975.2706621  27532.29845  0.47508  0.136575  0.000322 SOPHIE
+55975.3015000  27531.45000  0.77782  0.130315  0.000443 SOPHIE
+55975.3728167  27527.71667  0.44907  0.129553  0.000229 SOPHIE
+55975.4123750  27524.95000  0.55000  0.131378  0.000294 SOPHIE
+55977.4916500  27503.70000  0.48990  0.138304  0.000351 SOPHIE
+55977.5188000  27500.00000  1.20000  0.145900  0.001002 SOPHIE
+55977.5864500  27491.73333  0.48990  0.147546  0.000509 SOPHIE
+55980.4403000  27413.83333  0.44907  0.135077  0.000222 SOPHIE
+55980.5356000  27406.98333  0.44907  0.138407  0.000262 SOPHIE
+55983.3916579  27377.07535  0.46816  0.137773  0.000265 SOPHIE
+55983.4752667  27372.46667  0.48990  0.139561  0.000319 SOPHIE
+55983.5102667  27371.76667  0.69282  0.147672  0.000556 SOPHIE
+55989.2989000  27507.10000  1.20000  0.143600  0.000693 SOPHIE
+55989.3700831  27504.91296  0.45517  0.135298  0.000248 SOPHIE
+55989.4010385  27503.38264  0.81087  0.136921  0.000448 SOPHIE
+55997.3576000  27372.80000  1.30000  0.156600  0.001248 SOPHIE
+56011.3684132  27385.92335  0.46153  0.145415  0.000291 SOPHIE
+56011.3942000  27384.50000  1.10000  0.139500  0.000710 SOPHIE
+56011.4659200  27377.26000  0.53666  0.148629  0.000381 SOPHIE
+56014.3190167  27418.80000  0.48990  0.145047  0.000339 SOPHIE
+56014.3461000  27418.70000  1.20000  0.149200  0.000953 SOPHIE
+56014.4112500  27413.95000  0.48990  0.147738  0.000310 SOPHIE
+56014.4392000  27410.90000  1.20000  0.134500  0.000769 SOPHIE
+56352.3738287  27421.09528  0.57888  0.154102  0.000550 SOPHIE
+56355.3391194  27495.81125  0.46153  0.132730  0.000249 SOPHIE
+56355.3668000  27495.40000  1.20000  0.138000  0.000604 SOPHIE
+56355.4345143  27490.90350  0.52674  0.134892  0.000280 SOPHIE
+56355.4675667  27490.13333  0.69282  0.136966  0.000384 SOPHIE
