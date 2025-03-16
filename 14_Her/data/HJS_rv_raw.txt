@@ -1,0 +1,61 @@
+#RESOURCE=yCat_16540625
+#Name: J/ApJ/654/625
+#Title: Radial velocities of 9 long-period objects (Wittenmyer+, 2007)
+#INFO ivoid=ivo://cds.vizier/j/apj/654/625     IVOID of underlying data collection     
+#INFO creator=Wittenmyer R.A.     First author or institution     
+#INFO cites=bibcode:2007ApJ...654..625W     Article or Data origin sources     
+#INFO editor=Astrophysical Journal (AAS)     Editor name (article)     
+#INFO original_date=2007     Year of the article publication     
+#INFO reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJ/654/625     Dataset landing page     
+#INFO citation=doi:10.26093/cds/vizier.16540625     Dataset identifier that can be used for citation     
+#INFO publication_date=2017-10-13     Date of first publication in the data centre     
+#INFO rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html     Licence URI     
+#Table J_ApJ_654_625_veloc:
+#Name: J/ApJ/654/625/veloc
+#Title: Radial Velocities (tables 5 to 14 of paper)
+#---Details of Columns:
+    HD         (I6)    HD number [ucd=meta.id;meta.main]
+    Tel        (A3)    Telescope [ucd=meta.id;instr.tel]
+    JD         (F13.5) Julian Date of observation [ucd=time.epoch]
+    RV (m/s)   (F6.1)  Radial velocity [ucd=spect.dopplerVeloc;pos.heliocentric]
+    e_RV (m/s) (F4.1)  Uncertainty in RV [ucd=stat.error]
+------ --- ------------- ------ ----
+                                e_  
+                         RV     RV (
+HD     Tel JD            (m/s)  m/s)
+------ --- ------------- ------ ----
+145675 HJS 2451329.82953  154.3  7.4
+145675 HJS 2451358.76587  148.8  6.5
+145675 HJS 2451417.72632  127.8  7.5
+145675 HJS 2451449.62644  106.7  6.9
+145675 HJS 2451656.89886   11.7  7.3
+145675 HJS 2451689.69367   -0.5  7.2
+145675 HJS 2451750.74058   -0.8  8.0
+145675 HJS 2451777.71797  -20.2  6.7
+145675 HJS 2451809.60771  -21.1  6.8
+145675 HJS 2452037.88607  -31.4  7.0
+145675 HJS 2452115.73144  -35.1  7.1
+145675 HJS 2452145.70159  -23.4  7.7
+145675 HJS 2452181.62915  -23.7  7.1
+145675 HJS 2452354.98989  -25.0 12.7
+145675 HJS 2452451.80971   -2.1  7.4
+145675 HJS 2452454.80637   -3.2  6.7
+145675 HJS 2452471.72725  -12.3  6.4
+145675 HJS 2452495.71816  -13.9  7.4
+145675 HJS 2452541.58879   -0.7  7.0
+145675 HJS 2452806.74254   53.6  6.9
+145675 HJS 2452841.82135   55.6  7.5
+145675 HJS 2452933.55588   90.8  7.2
+145675 HJS 2453215.73683   90.9  8.0
+145675 HJS 2453505.84769  -31.7 10.0
+145675 HJS 2453505.87913  -42.9  8.2
+145675 HJS 2453563.74131  -39.8  6.6
+145675 HJS 2453586.66183  -31.3  8.0
+145675 HJS 2453633.61295  -47.0  7.2
+145675 HJS 2453636.60040  -56.8  6.6
+145675 HJS 2453805.95471  -71.0  7.2
+145675 HJS 2453809.96897  -66.3  7.2
+145675 HJS 2453840.90354  -62.0  8.2
+145675 HJS 2453863.84247  -62.0  9.3
+145675 HJS 2453909.73446  -57.6  7.3
+145675 HJS 2453927.75413  -58.5  6.8

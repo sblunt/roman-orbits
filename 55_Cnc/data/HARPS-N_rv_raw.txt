@@ -1,0 +1,48 @@
+#RESOURCE=yCat_36190001
+#Name: J/A+A/619/A1
+#Title: 55 Cnc radial velocities and photometry (Bourrier+, 2018)
+#INFO ivoid=ivo://cds.vizier/j/a+a/619/a1     IVOID of underlying data collection     
+#INFO creator=Bourrier V.     First author or institution     
+#INFO cites=bibcode:2018A&A...619A...1B     Article or Data origin sources     
+#INFO editor=Astronomy and Astrophysics     Editor name (article)     
+#INFO original_date=2018     Year of the article publication     
+#INFO reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/619/A1     Dataset landing page     
+#INFO citation=doi:10.26093/cds/vizier.36190001     Dataset identifier that can be used for citation     
+#INFO publication_date=2020-08-11     Date of first publication in the data centre     
+#INFO rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html     Licence URI     
+#Table J_A_A_619_A1_rv55cnc:
+#Name: J/A+A/619/A1/rv55cnc
+#Title: Radial velocities of 55 Cnc with S index
+#---Details of Columns:
+    RJD (d)    (F13.7) Reduced Julian date (JD-2400000) [ucd=time.epoch]
+    RV (m/s)   (F12.5) Radial velocity [ucd=phys.veloc;pos.heliocentric]
+    e_RV (m/s) (F8.5)  Radial velocity photon plus instrument error [ucd=stat.error]
+    Smw        (F9.6)  S Mount Wilson index [ucd=phot.flux;arith.ratio]
+    e_Smw      (F9.6)  S Mount Wilson index error [ucd=stat.error]
+    Inst       (A6)    Name of instrument [ucd=meta.id;instr]
+------------- ------------ -------- --------- --------- ------
+                           e_                                 
+RJD (d)       RV (m/s)     RV (m/s) Smw       e_Smw     Inst  
+------------- ------------ -------- --------- --------- ------
+56611.6185754  27374.17362  0.15782  0.163058  0.000226  HARPN
+56611.6601827  27372.53185  0.13156  0.163812  0.000137  HARPN
+56611.7029206  27369.73728  0.13326  0.164211  0.000132  HARPN
+56611.7424528  27367.44329  0.14258  0.163695  0.000142  HARPN
+56625.6092034  27395.84416  0.15681  0.155085  0.000227  HARPN
+56625.6511060  27394.09617  0.13943  0.154693  0.000175  HARPN
+56625.6941860  27391.29533  0.15037  0.155208  0.000204  HARPN
+56625.7369085  27388.98645  0.17190  0.154162  0.000281  HARPN
+56625.7702805  27386.03063  0.23472  0.154007  0.000391  HARPN
+56659.5138082  27414.84699  0.15527  0.158501  0.000107  HARPN
+56659.5588177  27413.48570  0.16056  0.156845  0.000114  HARPN
+56659.6046656  27412.13384  0.14796  0.156498  0.000101  HARPN
+56659.6331707  27413.02830  0.28988  0.156399  0.000193  HARPN
+56684.6027541  27401.60790  0.19998  0.150857  0.000334  HARPN
+56684.6446366  27397.66607  0.20965  0.148903  0.000365  HARPN
+56684.6895984  27393.22362  0.24326  0.136664  0.000565  HARPN
+56715.5183888  27386.90954  0.23174  0.166386  0.000504  HARPN
+56715.5632045  27385.40238  0.29335  0.163637  0.000812  HARPN
+56715.6070956  27383.91140  0.29978  0.163817  0.000848  HARPN
+56746.4419800  27391.48080  0.14381  0.157530  0.000102  HARPN
+56746.4858256  27390.39197  0.14481  0.158458  0.000097  HARPN
+56746.5233352  27388.83238  0.18622  0.157648  0.000156  HARPN
