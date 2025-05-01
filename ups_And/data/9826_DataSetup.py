@@ -55,6 +55,10 @@ def data_setup():
     combined_data = pd.concat([combined_data, 
         get_Wittenmyer07_HJS(f'{SYSTEM_HD}_Wittenmyer07_HJS.txt')],
         ignore_index=True )
+    # get SOPHIE (OHP)
+    combined_data = pd.concat([combined_data, 
+        get_ElodieArchive_SOPHIE(f'{SYSTEM_HD}_ElodieArchive_SOPHIE.txt')],
+        ignore_index=True )
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     # save compiled data file
@@ -257,6 +261,42 @@ def get_Wittenmyer07_HJS(data_file):
     new = new[STD_COL_NAMES]
 
     return new
+
+
+def get_ElodieArchive_SOPHIE(data_file):
+    """Read in SOPHIE/OHP RV data file from the Elodie Archive website
+
+    Args:
+        data_file (str): path to .txt file
+
+    Returns:
+        pd.DataFrame: RV dataframe
+    """
+    # load file
+    raw = pd.read_csv(data_file, comment='#', skiprows=26,
+                      names=['mnvel', 'errvel', 'time'], usecols=[6,7,17])
+     
+    # new df
+    new = raw.copy()
+    
+    # get relevant columns
+    new['tel'] = 'SOPHIE'
+
+    # remove nans
+    new = new[new['errvel'].notna()]
+
+    # convert to m/s
+    new['mnvel'] *= 1000
+    new['errvel'] *= 1000
+    
+    # reorder columns
+    new = new[STD_COL_NAMES]
+
+    return new
+
+
+
+
 
 
 ########################################################################
