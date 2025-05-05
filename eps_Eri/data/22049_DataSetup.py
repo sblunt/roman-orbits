@@ -55,6 +55,10 @@ def data_setup():
     combined_data = pd.concat([combined_data, 
         get_Zechmeister19_CES_VLC(f'{SYSTEM_HD}_Zechmeister13_CES-VLC.txt')],
         ignore_index=True )
+    # add EXPRES (LDT)
+    combined_data = pd.concat([combined_data, 
+        get_Roettenbacher22_EXPRES(f'{SYSTEM_HD}_Roettenbacher22_EXPRES.txt')],
+        ignore_index=True )
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     # save compiled data file
@@ -280,6 +284,35 @@ def get_Zechmeister19_CES_VLC(data_file):
     new = new[STD_COL_NAMES]
 
     return new
+
+
+def get_Roettenbacher22_EXPRES(data_file):
+    """Read in EXPRES data file from Roettenbacher+2022
+
+    Args:
+        data_file (str): path to .txt file
+
+    Returns:
+        pd.DataFrame: RV dataframe
+    """
+    # load file
+    raw = pd.read_csv(data_file, delim_whitespace=True, skiprows=37,
+                      names=['time', 'mnvel', 'errvel'], usecols=[0,1,2])
+     
+    # new df
+    new = raw.copy()
+    
+    # get relevant columns
+    new['tel'] = 'EXPRES'
+
+    # RJD to JD
+    new['time'] += 2400000
+    
+    # reorder columns
+    new = new[STD_COL_NAMES]
+
+    return new
+
 
 
 ########################################################################
