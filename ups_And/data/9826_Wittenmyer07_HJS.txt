@@ -1,0 +1,81 @@
+#  
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2025-04-09T00:08:06 [V7.4.6]
+#   In case of problem, please report to: cds-question@unistra.fr
+# 
+#   
+#Coosys J2000: eq_FK5 J2000 
+#INFO service_protocol=ASU   IVOID of the protocol through which the data was retrieved
+#INFO request_date=2025-04-09T00:08:06   Query execution date
+#INFO request=https://vizier.cds.unistra.fr/viz-bin/asu-txt?-oc.form=sexa&-out.max=unlimited&-order=I&-out.src=J/ApJ/654/625/veloc&-source=J/ApJ/654/625/veloc&-out=HD&HD=9826&-out=Tel&-out=JD&-out=RV&-out=e_RV&   Full request URL (POST)
+#INFO contact=cds-question@unistra.fr   Email or URL to contact publisher
+#INFO server_software=7.4.6   Software version
+#INFO publisher=CDS   Data centre that produced the VOTable
+
+#RESOURCE=yCat_16540625
+#Name: J/ApJ/654/625
+#Title: Radial velocities of 9 long-period objects (Wittenmyer+, 2007)
+#INFO ivoid=ivo://cds.vizier/j/apj/654/625     IVOID of underlying data collection     
+#INFO creator=Wittenmyer R.A.     First author or institution     
+#INFO cites=bibcode:2007ApJ...654..625W     Article or Data origin sources     
+#INFO editor=Astrophysical Journal (AAS)     Editor name (article)     
+#INFO original_date=2007     Year of the article publication     
+#INFO reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJ/654/625     Dataset landing page     
+#INFO citation=doi:10.26093/cds/vizier.16540625     Dataset identifier that can be used for citation     
+#INFO publication_date=2017-10-13     Date of first publication in the data centre     
+#INFO rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html     Licence URI     
+#Table J_ApJ_654_625_veloc:
+#Name: J/ApJ/654/625/veloc
+#Title: Radial Velocities (tables 5 to 14 of paper)
+#---Details of Columns:
+    HD         (I6)    HD number [ucd=meta.id;meta.main]
+    Tel        (A3)    Telescope [ucd=meta.id;instr.tel]
+    JD         (F13.5) Julian Date of observation [ucd=time.epoch]
+    RV (m/s)   (F6.1)  Radial velocity [ucd=spect.dopplerVeloc;pos.heliocentric]
+    e_RV (m/s) (F4.1)  Uncertainty in RV [ucd=stat.error]
+------ --- ------------- ------ ----
+                                e_  
+                         RV     RV (
+HD     Tel JD            (m/s)  m/s)
+------ --- ------------- ------ ----
+  9826 HJS 2451452.86152  -13.8  9.2
+  9826 HJS 2451452.86540   -3.0 13.4
+  9826 HJS 2451504.69248    0.8  8.1
+  9826 HJS 2451530.78235  -22.2  9.4
+  9826 HJS 2451532.65475  -16.0 10.8
+  9826 HJS 2451557.64589   26.8  7.7
+  9826 HJS 2451750.96883  113.1 10.6
+  9826 HJS 2451775.91401  -54.7  8.1
+  9826 HJS 2451778.93251   63.8  9.8
+  9826 HJS 2451809.77554  -62.0  8.6
+  9826 HJS 2451859.76793  -50.3  6.8
+  9826 HJS 2451861.85297   96.7  7.1
+  9826 HJS 2451861.85893   96.1  7.7
+  9826 HJS 2451862.79111   91.5 11.9
+  9826 HJS 2451862.79735   68.8 10.1
+  9826 HJS 2451918.75978    5.0  8.7
+  9826 HJS 2451918.76434   23.1  9.5
+  9826 HJS 2451920.67309   46.5  6.9
+  9826 HJS 2451946.68903   23.8 14.3
+  9826 HJS 2451987.57597    6.3  9.1
+  9826 HJS 2452142.87690   55.5  9.3
+  9826 HJS 2452218.75362  -63.5  9.6
+  9826 HJS 2452249.68686   -6.3  8.5
+  9826 HJS 2452329.57235 -125.9  8.7
+  9826 HJS 2452495.93509 -151.8 14.9
+  9826 HJS 2452539.84157 -104.7  9.3
+  9826 HJS 2452539.84425 -113.3  9.4
+  9826 HJS 2452577.85533    5.0  8.5
+  9826 HJS 2452619.75862   44.4  8.5
+  9826 HJS 2452933.79237  102.3 10.4
+  9826 HJS 2452933.79503   92.7  9.8
+  9826 HJS 2452958.68304   -5.6  9.1
+  9826 HJS 2453015.67064   28.9  8.2
+  9826 HJS 2453035.57199  -20.0  7.0
+  9826 HJS 2453394.63389   77.3 10.2
+  9826 HJS 2453394.64950   85.3 10.0
+  9826 HJS 2453394.65545   76.5 10.8
+  9826 HJS 2453632.91257 -106.3  9.2
+  9826 HJS 2453690.78040  -29.4 10.0
+  9826 HJS 2453691.77259 -130.3 13.4
+  9826 HJS 2453746.71222 -150.9  8.3
