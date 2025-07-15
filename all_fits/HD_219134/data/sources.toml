@@ -1,0 +1,122 @@
+# Standard list of instrument names can be found in instruments.toml
+# Any of the top-level or second-level keys can be used
+# e.g. hires, hiresk, and hiresj are all valid
+
+[motalebi2015]
+fname = "motalebi2015.csv"
+format = "ascii.csv"
+jd_name = "BJD"
+rv_name = "RV"
+e_rv_name = "e_RV"
+jd_offset = 2400000
+is_survey = false
+inst_new = "harpsn"
+
+[johnson2016hj]
+fname = "johnson2016hj.csv"
+format = "ascii.csv"
+jd_name = "BJD"
+rv_name = "dRV"
+e_rv_name = "e_dRV"
+jd_offset = 0
+inst_col.col = "Phase"
+is_survey = false
+
+[johnson2016hj.inst_col.names]
+I = "hjst1"
+II = "hjst2"
+III = "hjst3"
+
+[johnson2016hr]
+fname = "johnson2016hr.csv"
+format = "ascii.csv"
+jd_name = "BJD"
+rv_name = "dRV"
+e_rv_name = "e_dRV"
+jd_offset = 0
+inst_col.col = "CCD"
+is_survey = false
+
+[johnson2016hr.inst_col.names]
+Old = "hiresk"
+New = "hiresj"
+
+[howard2016]
+fname = "howard2016.tbl"
+format = "ascii.ipac"
+jd_name = "HJD"
+rv_name = "Radial_Velocity"
+e_rv_name = "Radial_Velocity_Uncertainty"
+jd_offset = 0
+inst_new = "hiresj"
+is_survey = false
+
+[butler2017]
+fname = "butler2017.csv"
+format = "ascii.csv"
+jd_name = "BJD"
+rv_name = "RV"
+e_rv_name = "e_RV"
+jd_offset = 0
+inst_new = "hires"
+is_survey = false
+
+[bonfanti2020]
+fname = "bonfanti2020.csv"
+format = "ascii.csv"
+jd_name = "_tab5_1"
+rv_name = "RV"
+e_rv_name = "e_RV"
+jd_offset = 2450000
+inst_new = "harpsn"
+is_survey = false
+
+[hirsch2021]
+fname = "hirsch2021.csv"
+format = "ascii.csv"
+jd_name = "_tab3_3"
+rv_name = "RVel"
+e_rv_name = "e_RVel"
+jd_offset = 0
+is_survey = false
+inst_col.col = "Inst"
+
+[hirsch2021.inst_col.names]
+"j" = "hiresj"
+apf = "apf"
+lick = "ignore"
+
+[callegacy]
+fname = "californialegacyrvs.txt"
+format = "ascii.cds"
+jd_name = "BJD"
+rv_name = "RVel"
+e_rv_name = "e_RVel"
+jd_offset = 0
+is_survey = true
+inst_col.col = "Inst"
+
+[callegacy.inst_col.names]
+k = "hiresk"
+j = "hiresj"
+apf = "apf"
+lick = "ignore"
+
+[callegacy.system_col]
+col = "Name"
+name = "219134"
+
+[lick25yr]
+fname = "lick25.csv"
+format = "ascii.csv"
+jd_name = "JD"
+rv_name = "RVel"
+e_rv_name = "e_RVel"
+jd_offset = 2400000
+inst_col.col = "CCD"
+is_survey = false
+
+[lick25yr.inst_col.names]
+"6" = "lick6"
+"8" = "lick8"
+"13" = "lick13"

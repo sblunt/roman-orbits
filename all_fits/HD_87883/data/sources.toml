@@ -1,0 +1,80 @@
+# Standard list of instrument names:
+# hiresk - HIRES data before August 2004 CCD upgrade
+# hiresj - HIRES data after August 2004 CCD upgrade
+# apf - Automated Planet Finder
+# lick - Lick Observatory (NEEDS DIVIDING BY CCD UPGRADE)
+
+[callegacy]
+fname = "californialegacyrvs.txt"
+format = "ascii.cds"
+jd_name = "BJD"
+rv_name = "RVel"
+e_rv_name = "e_RVel"
+jd_offset = 0
+is_survey = true
+inst_col.col = "Inst"
+
+[callegacy.inst_col.names]
+k = "hiresk"
+j = "hiresj"
+apf = "apf"
+lick = "ignore"
+
+[callegacy.system_col]
+col = "Name"
+name = "87883"
+
+[lick25yr]
+fname = "lick25.csv"
+format = "ascii.csv"
+jd_name = "JD"
+rv_name = "RVel"
+e_rv_name = "e_RVel"
+jd_offset = 2400000
+inst_col.col = "CCD"
+is_survey = false
+
+[lick25yr.inst_col.names]
+"6" = "lick6"
+"8" = "lick8"
+"13" = "lick13"
+
+[fisher2009]
+fname = "fisher2009.csv"
+format = "ascii.csv"
+jd_name = "JD"
+rv_name = "RV"
+e_rv_name = "e_RV"
+jd_offset = 2440000
+is_survey = false
+inst_col.col = "Observatory"
+
+[fisher2009.inst_col.names]
+L = "ignore" # Ignore Lick data in favor of the Lick 25 yr planet search data w/ CCDs marked
+K = "hiresk"
+
+[butler2017]
+fname = "butler2017.csv"
+format = "ascii.csv"
+jd_name = "BJD"
+rv_name = "RV"
+e_rv_name = "e_RV"
+jd_offset = 0
+inst_new = "hires"
+is_survey = false
+
+[hirsch2021]
+fname = "hirsch2021.csv"
+format = "ascii.csv"
+jd_name = "_tab3_3"
+rv_name = "RVel"
+e_rv_name = "e_RVel"
+jd_offset = 0
+is_survey = false
+inst_col.col = "Inst"
+
+[hirsch2021.inst_col.names]
+"j" = "hiresj"
+"k" = "hiresk"
+apf = "apf"
+lick = "ignore"

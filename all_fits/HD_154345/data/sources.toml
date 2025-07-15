@@ -1,0 +1,86 @@
+# Standard list of instrument names can be found in instruments.toml
+# Any of the top-level or second-level keys can be used
+# e.g. hires, hiresk, and hiresj are all valid
+
+[wright2008]
+fname = "wright2008.txt"
+format = "ascii.basic"
+jd_name = "jd"
+rv_name = "rv"
+e_rv_name = "e_rv"
+jd_offset = 2440000
+is_survey = false
+inst_new = "hires"
+
+[wright2007]
+fname = "wright2007.txt"
+format = "ascii.basic"
+jd_name = "jd"
+rv_name = "rv"
+e_rv_name = "e_rv"
+jd_offset = 2440000
+is_survey = false
+inst_new = "hires"
+
+[boisse2012e]
+fname = "boisse2012e.dat"
+format = "ascii.basic"
+jd_name = "jd"
+rv_name = "rv"
+e_rv_name = "e_rv"
+jd_offset = 0
+is_survey = false
+inst_new = "elodie"
+
+[boisse2012s]
+fname = "boisse2012s.dat"
+format = "ascii.basic"
+jd_name = "jd"
+rv_name = "rv"
+e_rv_name = "e_rv"
+jd_offset = 0
+is_survey = false
+inst_new = "sophie"
+
+[butler2017]
+fname = "butler2017.csv"
+format = "ascii.csv"
+jd_name = "BJD"
+rv_name = "RV"
+e_rv_name = "e_RV"
+jd_offset = 0
+inst_new = "hires"
+is_survey = false
+
+[hirsch2021]
+fname = "hirsch2021.csv"
+format = "ascii.csv"
+jd_name = "_tab3_3"
+rv_name = "RVel"
+e_rv_name = "e_RVel"
+jd_offset = 0
+is_survey = false
+inst_col.col = "Inst"
+
+[hirsch2021.inst_col.names]
+"j" = "hiresj"
+
+[callegacy]
+fname = "californialegacyrvs.txt"
+format = "ascii.cds"
+jd_name = "BJD"
+rv_name = "RVel"
+e_rv_name = "e_RVel"
+jd_offset = 0
+is_survey = true
+inst_col.col = "Inst"
+
+[callegacy.inst_col.names]
+k = "hiresk"
+j = "hiresj"
+apf = "apf"
+lick = "ignore"
+
+[callegacy.system_col]
+col = "Name"
+name = "154345"

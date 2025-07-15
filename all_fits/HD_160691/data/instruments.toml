@@ -1,0 +1,114 @@
+# Keck's HIRES spectrograph
+
+[hires]
+divide = true
+
+[hires.hiresk]
+jd_min = 0
+jd_max = 2453237
+
+[hires.hiresj]
+jd_min = 2453237
+jd_max = inf
+
+#===============================================================================
+
+[apf]
+divide = false
+
+#===============================================================================
+
+[lick]
+divide = false
+
+#===============================================================================
+
+[elodie]
+divide = false
+
+#===============================================================================
+
+[sophie]
+divide = false
+
+#===============================================================================
+# AAT's UCLES Spectrograph
+
+[ucles]
+divide = false
+
+#===============================================================================
+# ESO's HARPS Spectrograph
+
+[harps]
+divide = true
+
+# Data points from the commissioning of HARPS until the 2015 Fiber Upgrade
+[harps.harps0]
+jd_min = 0
+jd_max = 2457157
+
+# Some data was taken during the fiber upgrade. The spectrograph was not
+# stable during this period, do not use this data.
+[harps.ignoreharps01]
+jd_min = 2457157
+jd_max = 2457177
+
+# Data points from the completion of the 2015 Fiber Upgrade to the
+# beginning of the 2023 Cryostat Intervention
+[harps.harps1]
+jd_min = 2457177
+jd_max = 2460263
+
+# Some data may have been taken during the cryostat intervention.
+# The spectrograph likely would not have been stable during this period,
+# so do not use this data.
+[harps.ignoreharps12]
+jd_min = 2460263
+jd_max = 2460277
+
+# Data points after the 2023 cryostat intervention
+[harps.harps2]
+jd_min = 2460277
+jd_max = inf
+
+#===============================================================================
+# ESO's HARPS-N Spectrograph
+
+[harpsn]
+divide = false
+
+#===============================================================================
+
+[coralie]
+divide = false
+
+#===============================================================================
+
+[pfs]
+divide = true
+
+[pfs.pfspre]
+jd_min = 0
+jd_max = 2400000
+
+[pfs.pfspost]
+jd_min = 2400000
+jd_max = inf
+
+#===============================================================================
+
+[hjst]
+divide = false
+
+[hjst.hjst1]
+jd_min = 0
+jd_max = 1
+
+[hjst.hjst2]
+jd_min = 1
+jd_max = 2
+
+[hjst.hjst3]
+jd_min = 2
+jd_max = 3
