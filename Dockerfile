@@ -13,11 +13,14 @@ ENV OMP_NUM_THREADS=1
 RUN mkdir /roman_orbits && \
     apt-get --yes update && \
     apt install build-essential -y --no-install-recommends && \
-    apt-get install --yes git vim emacs nano parallel && \
+    apt-get install --yes git vim emacs nano parallel pkg-config libhdf5-dev && \
     /usr/local/bin/python -m pip install --upgrade pip && \
     cd /roman_orbits
 
 WORKDIR /roman_orbits
 
-ADD all_fits /roman_orbits
-ADD  requirements.txt /roman_orbits
+COPY all_fits /roman_orbits
+COPY requirements.txt /roman_orbits
+
+RUN pip install -r requirements.txt
+RUN chmod u=rxw /roman_orbits
