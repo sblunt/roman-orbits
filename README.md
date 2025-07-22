@@ -21,3 +21,11 @@ DOCKER SETUP INSTRUCTIONS:
 
 4. That's it! If everything works correctly, you should now be inside a docker container, and can run orbit fits
 within a standardized environment.
+
+
+## Sanity Checks:
+
+- Examine trend files. Do chains look converged?
+- Make sure time offsets have been accounted for in file combinations
+- Parameters consistent with Exoplanet Archive?
+- Previous fit? Compare output if so
