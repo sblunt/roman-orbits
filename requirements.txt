@@ -1,1 +1,3 @@
 radvel==1.4.11
+h5py
+celerite
