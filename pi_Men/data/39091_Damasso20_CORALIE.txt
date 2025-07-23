@@ -1,0 +1,91 @@
+#  
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2025-04-09T22:45:46 [V7.4.6]
+#   In case of problem, please report to: cds-question@unistra.fr
+# 
+#   
+#Coosys J2000: eq_FK5 J2000 
+#INFO service_protocol=ASU   IVOID of the protocol through which the data was retrieved
+#INFO request_date=2025-04-09T22:45:46   Query execution date
+#INFO request=https://vizier.cds.unistra.fr/viz-bin/asu-txt?-oc.form=sexa&-out.max=unlimited&-source=J/A+A/642/A31/tableb2&-order=I&-out=Time&-out=RV&-out=e_RV&-out=Dataset&   Full request URL (POST)
+#INFO contact=cds-question@unistra.fr   Email or URL to contact publisher
+#INFO server_software=7.4.6   Software version
+#INFO publisher=CDS   Data centre that produced the VOTable
+
+#RESOURCE=yCat_36420031
+#Name: J/A+A/642/A31
+#Title: pi Men radial velocity curves (Damasso+, 2020)
+#INFO ivoid=ivo://cds.vizier/j/a+a/642/a31     IVOID of underlying data collection     
+#INFO creator=Damasso M.     First author or institution     
+#INFO cites=bibcode:2020A&A...642A..31D     Article or Data origin sources     
+#INFO editor=Astronomy and Astrophysics     Editor name (article)     
+#INFO original_date=2020     Year of the article publication     
+#INFO reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/642/A31     Dataset landing page     
+#INFO citation=doi:10.26093/cds/vizier.36420031     Dataset identifier that can be used for citation     
+#INFO publication_date=2021-09-08     Date of first publication in the data centre     
+#INFO rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html     Licence URI     
+#Table J_A_A_642_A31_tableb2:
+#Name: J/A+A/642/A31/tableb2
+#Title: Radial velocities from CORALIE spectra
+#---Details of Columns:
+    Time (d)   (F11.6) Epoch of observation (BJD-2450000) [ucd=time.epoch]
+    RV (m/s)   (F8.2)  Systemic radial velocity [ucd=phys.veloc;pos.heliocentric]
+    e_RV (m/s) (F5.2)  Radial velocity error [ucd=stat.error]
+    Dataset    (A10)   Dataset (CORALIE-98, CORALIE-07 or CORALIE-14) [ucd=meta.id;meta.dataset]
+----------- -------- ----- ----------
+                     e_RV            
+Time (d)    RV (m/s) (m/s) Dataset   
+----------- -------- ----- ----------
+1131.806114 10609.63  8.74 CORALIE-98
+1139.791656 10592.62  6.14 CORALIE-98
+1189.666147 10617.22  5.81 CORALIE-98
+1256.511024 10625.82  5.32 CORALIE-98
+1453.866446 10584.39  5.70 CORALIE-98
+1902.680496 10615.21  2.56 CORALIE-98
+3418.550913 10595.03  3.20 CORALIE-98
+4046.797033 10637.35  2.83 CORALIE-98
+4097.729955 10710.95  2.87 CORALIE-98
+4108.690443 10726.30  2.70 CORALIE-98
+4433.741723 10759.67  3.21 CORALIE-07
+4768.871290 10683.87  4.28 CORALIE-07
+4808.722259 10665.89  7.64 CORALIE-07
+4814.688809 10661.97  2.73 CORALIE-07
+4817.692073 10655.47  2.83 CORALIE-07
+5097.897419 10627.11  3.04 CORALIE-07
+5129.860767 10624.08  2.88 CORALIE-07
+5201.650811 10627.52  4.23 CORALIE-07
+5927.670281 10598.38  2.74 CORALIE-07
+6318.607337 10980.69  3.04 CORALIE-07
+6586.846661 10771.65  2.76 CORALIE-07
+6648.790972 10736.74  2.48 CORALIE-14
+7650.831935 10619.32  2.52 CORALIE-14
+7701.755463 10620.53  2.76 CORALIE-14
+7739.668036 10626.05  3.65 CORALIE-14
+7771.649819 10616.37  2.76 CORALIE-14
+8023.863250 10610.01  2.79 CORALIE-14
+8039.871564 10617.09  2.65 CORALIE-14
+8067.711941 10625.36  2.59 CORALIE-14
+8068.726241 10626.56  2.61 CORALIE-14
+8105.594616 10617.93 11.13 CORALIE-14
+8118.694564 10633.06  2.93 CORALIE-14
+8368.904220 10927.89  2.40 CORALIE-14
+8369.827347 10934.75  1.82 CORALIE-14
+8370.842828 10931.06  1.86 CORALIE-14
+8371.856224 10939.83  1.82 CORALIE-14
+8372.823500 10939.66  1.94 CORALIE-14
+8375.825311 10952.69  1.93 CORALIE-14
+8376.910227 10953.65  3.10 CORALIE-14
+8378.833191 10953.35  1.84 CORALIE-14
+8414.871054 11004.98  2.06 CORALIE-14
+8417.866280 10997.54  2.95 CORALIE-14
+8427.749370 10995.25  2.55 CORALIE-14
+8451.645712 10984.96  2.48 CORALIE-14
+8468.609599 10962.08  2.89 CORALIE-14
+8493.615334 10933.41  3.04 CORALIE-14
+8542.595645 10880.05  2.86 CORALIE-14
+8745.901076 10748.87  4.26 CORALIE-14
+8756.891195 10752.36  3.15 CORALIE-14
+8802.772857 10734.78  3.82 CORALIE-14
+8844.690365 10724.36  3.23 CORALIE-14
+8855.703833 10715.16  4.42 CORALIE-14
+8891.543187 10707.57  2.94 CORALIE-14

@@ -1,0 +1,112 @@
+#  
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2025-04-08T23:56:20 [V7.4.6]
+#   In case of problem, please report to: cds-question@unistra.fr
+# 
+#   
+#Coosys J2000: eq_FK5 J2000 
+#INFO service_protocol=ASU   IVOID of the protocol through which the data was retrieved
+#INFO request_date=2025-04-08T23:56:20   Query execution date
+#INFO request=https://vizier.cds.unistra.fr/viz-bin/asu-txt?-oc.form=sexa&-out.max=unlimited&-source=J/A+A/414/351/table1&-order=I&-out=BJD&-out=RV&-out=e_RV&-out=Instr&   Full request URL (POST)
+#INFO contact=cds-question@unistra.fr   Email or URL to contact publisher
+#INFO server_software=7.4.6   Software version
+#INFO publisher=CDS   Data centre that produced the VOTable
+
+#RESOURCE=yCat_34140351
+#Name: J/A+A/414/351
+#Title: ELODIE survey for northern extrasolar planets III (Naef+, 2004)
+#INFO ivoid=ivo://cds.vizier/j/a+a/414/351     IVOID of underlying data collection     
+#INFO creator=Naef D.     First author or institution     
+#INFO cites=bibcode:2004A&A...414..351N     Article or Data origin sources     
+#INFO editor=Astronomy and Astrophysics     Editor name (article)     
+#INFO original_date=2004     Year of the article publication     
+#INFO reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/414/351     Dataset landing page     
+#INFO citation=doi:10.26093/cds/vizier.34140351     Dataset identifier that can be used for citation     
+#INFO publication_date=2017-06-27     Date of first publication in the data centre     
+#INFO rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html     Licence URI     
+#Table J_A_A_414_351_table1:
+#Name: J/A+A/414/351/table1
+#Title: Radial velocity measurements for HD 9826
+#---Details of Columns:
+    BJD (d)     (F12.4) Barycentric Julian date [ucd=time.epoch]
+    RV (km/s)   (F7.3)  Barycentric radial velocity (1) [ucd=phys.veloc;pos.barycenter]
+    e_RV (km/s) (F6.3)  Full RV uncertainty [ucd=stat.error]
+    Instr       (I1)    [1,2] Instrument (1: ELODIE, 2: CORALIE) [ucd=meta.id;instr]
+------------ ------- ------ -
+                            I
+                            n
+                            s
+             RV      e_RV   t
+BJD (d)      (km/s)  (km/s) r
+------------ ------- ------ -
+2450319.4928 -28.542  0.008 1
+2450320.4366 -28.543  0.007 1
+2450324.5651 -28.520  0.008 1
+2450324.5720 -28.517  0.008 1
+2450325.5264 -28.612  0.008 1
+2450325.5323 -28.612  0.007 1
+2450325.6479 -28.619  0.007 1
+2450325.6533 -28.624  0.007 1
+2450326.5842 -28.678  0.008 1
+2450326.5892 -28.668  0.010 1
+2450327.5345 -28.634  0.008 1
+2450327.5430 -28.637  0.007 1
+2450327.6712 -28.631  0.007 1
+2450328.5435 -28.516  0.008 1
+2450328.5596 -28.532  0.008 1
+2450329.4916 -28.543  0.007 1
+2450329.4965 -28.551  0.007 1
+2450329.6192 -28.568  0.008 1
+2450380.4722 -28.624  0.008 1
+2450381.4117 -28.730  0.008 1
+2450382.4313 -28.736  0.007 1
+2450384.3418 -28.601  0.007 1
+2450385.3961 -28.630  0.009 1
+2450447.3669 -28.627  0.009 1
+2450476.2844 -28.524  0.008 1
+2450479.2641 -28.683  0.007 1
+2450700.6070 -28.649  0.008 1
+2450701.6122 -28.598  0.008 1
+2450702.5707 -28.515  0.007 1
+2450730.5038 -28.545  0.008 1
+2450733.5478 -28.687  0.010 1
+2450735.5035 -28.544  0.011 1
+2450797.3255 -28.741  0.008 1
+2450821.3223 -28.768  0.007 1
+2450823.3477 -28.657  0.007 1
+2450825.3497 -28.809  0.008 1
+2450825.3547 -28.801  0.008 1
+2450825.4021 -28.768  0.011 1
+2450859.2763 -28.709  0.008 1
+2450863.2778 -28.778  0.008 1
+2451053.6222 -28.660  0.009 1
+2451118.4635 -28.706  0.009 1
+2451118.4690 -28.684  0.010 1
+2451122.4978 -28.709  0.011 1
+2451152.3842 -28.758  0.012 1
+2451155.3457 -28.612  0.013 1
+2451158.3708 -28.760  0.009 1
+2451174.2994 -28.634  0.012 1
+2451420.6150 -28.623  0.008 1
+2451421.6332 -28.623  0.008 1
+2451439.5607 -28.630  0.008 1
+2451505.4202 -28.585  0.008 1
+2451508.4294 -28.673  0.007 1
+2451511.5250 -28.564  0.009 1
+2451556.3543 -28.645  0.008 1
+2451559.3682 -28.743  0.007 1
+2451561.3401 -28.604  0.008 1
+2451587.2654 -28.746  0.009 1
+2451590.2544 -28.636  0.008 1
+2451808.5310 -28.743  0.009 1
+2451852.4633 -28.573  0.010 1
+2451882.3859 -28.670  0.008 1
+2452159.6317 -28.693  0.008 1
+2452160.6492 -28.638  0.008 1
+2452162.5376 -28.571  0.008 1
+2452216.4137 -28.664  0.007 1
+2452218.4181 -28.658  0.007 1
+2452249.3539 -28.676  0.008 1
+2452250.3273 -28.667  0.009 1
+2452531.5868 -28.707  0.008 1
+2452885.5724 -28.540  0.008 1
