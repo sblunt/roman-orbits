@@ -1,4 +1,4 @@
-BJD	RV [km/s]	Uncertainty [km/s]
+MJD	RV [km/s]	Uncertainty [km/s]
 55756.500	-45.2113	0.0013 
 55757.487	-45.2097	0.0012 
 55758.507	-45.2077	0.0011 
