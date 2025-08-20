@@ -1,5 +1,3 @@
-Include scripts here to run orbit-fits. This should be (e.g. for radvel) both 
-setup files, final model report, and bash scripts that run things like `radvel fit` and `radvel mcmc`
-in order to make it as easily reproducible as possible. We should call our script
-that runs our "adopted" fit "run_orbit.sh" to make it easy to (for example) collect and 
-re-run all the fits at once for all targets.
+RV params for planet b totally consistent with Rosenthal+ 2021; planet c params we're finding are
+inconsistent with theirs at just over 1sigma-- our sma is higher, msini is higher, and our eccentricity
+is roughly double theirs. Likely just ebcause we're using more data. 
