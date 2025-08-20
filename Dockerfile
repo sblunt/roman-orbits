@@ -23,4 +23,4 @@ COPY all_fits /roman_orbits
 COPY requirements.txt /roman_orbits
 
 RUN pip install -r requirements.txt
-RUN chmod u=rxw /roman_orbits
+RUN chmod u=rxw -R /roman_orbits/all_fits
