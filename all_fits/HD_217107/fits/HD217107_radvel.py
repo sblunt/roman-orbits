@@ -51,7 +51,7 @@ anybasis_params['jit_HIRES-pre'] = radvel.Parameter(value=5.0)
 anybasis_params['jit_HIRES-post'] = radvel.Parameter(value=5.0)        
 anybasis_params['jit_APF'] = radvel.Parameter(value=5.0)
 anybasis_params['jit_HJS'] = radvel.Parameter(value=5.0)  
-anybasis_params['jit_CORALIE'] = radvel.Parameter(value=5.0)
+anybasis_params['jit_CORALIE'] = radvel.Parameter(value=8.0)
 
 
 # Convert input orbital parameters into the fitting basis
@@ -89,12 +89,14 @@ priors = [
     #radvel.prior.Gaussian('k1', params['k1'].value, 0.23),
     #radvel.prior.Gaussian('per2', params['per2'].value, 0.0038),
     #radvel.prior.Gaussian('k2', params['k2'].value, 0.25),
-    radvel.prior.HardBounds('jit_Hamilton', 0.0, 10.0),
+    radvel.prior.HardBounds('jit_Hamilton', 0.0, 100.0),
     radvel.prior.HardBounds('jit_HIRES-pre', 0.0, 10.0),
     radvel.prior.HardBounds('jit_HIRES-post', 0.0, 10.0),
     radvel.prior.HardBounds('jit_APF', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_HJS', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_CORALIE', 0.0, 10.0)
+    radvel.prior.HardBounds('jit_HJS', 0.0, 100.0),
+    radvel.prior.HardBounds('jit_CORALIE', 0.1, 10.0) # in the initial optimization this 
+                                                      # value likes to go to like 1e-17 which 
+                                                      # makes MCMC difficult, so nudge it in the right direction
 ]
 
 # abscissa for slope and curvature terms (should be near mid-point of time baseline)
