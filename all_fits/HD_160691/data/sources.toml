@@ -1,0 +1,109 @@
+# Standard list of instrument names can be found in instruments.toml
+# Any of the top-level or second-level keys can be used
+# e.g. hires, hiresk, and hiresj are all valid
+
+[mccarthy2004]
+fname = "mccarthy2004.txt"
+format = "ascii.basic"
+jd_name = "jd"
+rv_name = "rv"
+e_rv_name = "e_rv"
+jd_offset = 2450000
+is_survey = false
+inst_new = "ucles"
+
+[butler2006]
+fname = "butler2006.txt"
+format = "ascii.cds"
+jd_name = "JD"
+rv_name = "RVel"
+e_rv_name = "Uncertainty"
+jd_offset = 2440000
+is_survey = true
+inst_col.col = "Obs"
+
+[butler2006.inst_col.names]
+K = "hires"
+A = "ucles"
+L = "lick"
+
+# What column should be looked in to figure out
+# what data belongs to this system?
+[butler2006.system_col]
+col = "Name"
+name = "mu Ara"
+
+[pepe2007h]
+fname = "pepe2007h.tex"
+format = "ascii.latex"
+jd_name = "jd"
+rv_name = "rv"
+e_rv_name = "e_rv"
+jd_offset = 2400000
+is_survey = false
+inst_new = "harps"
+
+[pepe2007c]
+fname = "pepe2007c.tex"
+format = "ascii.latex"
+jd_name = "jd"
+rv_name = "rv"
+e_rv_name = "e_rv"
+jd_offset = 2400000
+is_survey = false
+inst_new = "coralie"
+
+[benedict2022]
+fname = "benedict2022.txt"
+format = "ascii.cds"
+jd_name = "mJD"
+rv_name = "RVel"
+e_rv_name = "e_RVel"
+rv_in_km = true # This line is optional, only here for data in km/s not m/ss
+jd_offset = 2400000
+is_survey = false
+inst_col.col = "Source"
+
+[benedict2022.inst_col.names]
+"11" = "harps"
+"12" = "coralie"
+"14" = "ucles"
+"15" = "harps"
+
+[laliotis2023]
+fname = "laliotis2023.csv"
+format = "ascii.csv"
+jd_name = "_tab2_2"
+rv_name = "RVel"
+e_rv_name = "e_RVel"
+jd_offset = 0
+is_survey = false
+inst_col.col = "Inst"
+
+[laliotis2023.inst_col.names]
+HARPS-Post = "harps"
+HARPS-Pre = "harps"
+PFS-Post = "pfspost"
+PFS-Pre = "pfspre"
+UCLES = "ucles"
+
+
+[callegacy]
+fname = "californialegacyrvs.txt"
+format = "ascii.cds"
+jd_name = "BJD"
+rv_name = "RVel"
+e_rv_name = "e_RVel"
+jd_offset = 0
+is_survey = true
+inst_col.col = "Inst"
+
+[callegacy.inst_col.names]
+k = "hiresk"
+j = "hiresj"
+apf = "apf"
+lick = "ignore"
+
+[callegacy.system_col]
+col = "Name"
+name = "160691"
