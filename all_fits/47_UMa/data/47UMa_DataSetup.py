@@ -14,11 +14,10 @@ Created on Wed Jul  3 11:55:32 2024
 import pandas as pd
 import radvel
 
-path1 = 'path/ELODIE_rv_raw.txt'
-path2 = 'path/HJS_rv_raw.txt'
-path3 = 'path/HRS_rv_raw.txt'
-path4 = 'path/CLS_rv_raw.txt'
-savepath = 'path/'
+path1 = 'ELODIE_rv_raw.txt'
+path2 = 'HJS_rv_raw.txt'
+path3 = 'HRS_rv_raw.txt'
+path4 = 'CLS_rv_raw.txt'
 
 # set nightly binning option
 binning = 1   # nightly bin, 1 for yes, 2 for no
@@ -53,7 +52,7 @@ data4_hires['tel'] = 'HIRES-post'
 # data concatenation and optionally do nightly bin of all data sources
 dataframe = [data1,data2,data3,data4_ham,data4_apf,data4_hires]
 data_all = pd.concat(dataframe,ignore_index=True)
-data_all.to_csv(savepath+'47UMa_rv_master_unbinned.txt',sep='\t',index=False, header=True)
+data_all.to_csv('47UMa_rv_master_unbinned.txt',sep='\t',index=False, header=True)
 
 # nightly bin
 if binning == 1:
@@ -63,5 +62,5 @@ if binning == 1:
     bin_dict = {'time':time, 'mnvel':mnvel, 'errvel':errvel, 'tel':tel}
 
     data_all_bin = pd.DataFrame(data=bin_dict)
-    data_all_bin.to_csv(savepath+'47UMa_rv_master_binned.txt',sep='\t',index=False, header=True)
+    data_all_bin.to_csv('47UMa_rv_master_binned.txt',sep='\t',index=False, header=True)
 

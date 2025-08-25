@@ -1,5 +1,3 @@
-Include scripts here to run orbit-fits. This should be (e.g. for radvel) both 
-setup files, final model report, and bash scripts that run things like `radvel fit` and `radvel mcmc`
-in order to make it as easily reproducible as possible. We should call our script
-that runs our "adopted" fit "run_orbit.sh" to make it easy to (for example) collect and 
-re-run all the fits at once for all targets.
+According to https://www.aanda.org/articles/aa/full_html/2018/11/aa33154-18/aa33154-18.html
+some RV data were taken during the transit of 55 Cnc e. However, they argue the effect is
+small (<0.5 m/s) and can be safely ignored.

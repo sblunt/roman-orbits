@@ -14,13 +14,12 @@ Created on Thu Jul 11 18:22:54 2024
 import pandas as pd
 import radvel
 
-path1 = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/05-55Cnc/McDonald_rv_raw.txt'
-path2 = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/05-55Cnc/ELODIE_rv_raw.txt'
-path3 = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/05-55Cnc/CLS_rv_raw.txt'
-path4 = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/05-55Cnc/HARPS_rv_raw.txt'
-path5 = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/05-55Cnc/HARPS-N_rv_raw.txt'
-path6 = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/05-55Cnc/SOPHIE_rv_raw.txt'
-savepath = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/05-55Cnc/'
+path1 = 'McDonald_rv_raw.txt'
+path2 = 'ELODIE_rv_raw.txt'
+path3 = 'CLS_rv_raw.txt'
+path4 = 'HARPS_rv_raw.txt'
+path5 = 'HARPS-N_rv_raw.txt'
+path6 = 'SOPHIE_rv_raw.txt'
 
 # set nightly binning option
 binning = 1   # nightly bin, 1 for yes, 2 for no
@@ -79,7 +78,7 @@ data6['tel'] = 'SOPHIE'
 dataframe = [data1_hjs,data1_hrs,data2,data3_ham,data3_pre,data3_post,data3_apf,\
              data4,data5,data6]
 data_all = pd.concat(dataframe,ignore_index=True)
-data_all.to_csv(savepath+'55Cnc_rv_master_unbinned.txt',sep='\t',index=False, header=True)
+data_all.to_csv('55Cnc_rv_master_unbinned.txt',sep='\t',index=False, header=True)
 
 # nightly bin
 if binning == 1:
@@ -89,6 +88,6 @@ if binning == 1:
     bin_dict = {'time':time, 'mnvel':mnvel, 'errvel':errvel, 'tel':tel}
 
     data_all_bin = pd.DataFrame(data=bin_dict)
-    data_all_bin.to_csv(savepath+'55Cnc_rv_master_binned.txt',sep='\t',index=False, header=True)
+    data_all_bin.to_csv('55Cnc_rv_master_binned.txt',sep='\t',index=False, header=True)
 
 

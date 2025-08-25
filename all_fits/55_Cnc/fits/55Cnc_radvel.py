@@ -106,7 +106,7 @@ params['curv'].vary = False
 # Load radial velocity data, in this example the data is contained in an hdf file,
 # the resulting dataframe or must have 'time', 'mnvel', 'errvel', and 'tel' keys
 # the velocities are expected to be in m/s
-path = '/Users/zhexingli/Desktop/UCR/01-RESEARCH/PROJECTS/WFIRST/Refinement/RealSims/05-55Cnc/55Cnc_rv_master_binned.txt'
+path = '/roman_orbits/all_fits/55_Cnc/data/55Cnc_rv_master_binned.txt'
 
 data = pd.read_csv(path,header=None,skiprows=1,delim_whitespace=True,names=('time','mnvel','errvel','tel'))
 
