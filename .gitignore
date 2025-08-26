@@ -1,5 +1,4 @@
 # Ignore radvel outputs & chains
-*.pdf
 *.stat
 *autocorr.csv
 *csv.bz2
