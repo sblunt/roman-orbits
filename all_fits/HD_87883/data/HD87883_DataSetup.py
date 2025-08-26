@@ -3,6 +3,7 @@ from astropy.table import Table
 from copy import deepcopy
 import toml, os
 from pprint import pprint
+import radvel
 
 #running_from_top_dir = True
 
@@ -207,4 +208,13 @@ finaldata[standard_names[3]] = finaldata[standard_names[4]].astype(str) + "-" + 
 
 print("Final set of RVs consists of {} unique data points.".format(len(finaldata)))
 
-finaldata.to_csv("all_rvs.csv", index = False)
+finaldata.to_csv("all_rvs_unbinned.csv", index = False)
+
+time, mnvel, errvel, tel = radvel.utils.bintels(finaldata['time'].values,\
+                            finaldata['mnvel'].values,finaldata['errvel'].values,\
+                            finaldata['tel'])
+bin_dict = {'time':time, 'mnvel':mnvel, 'errvel':errvel, 'tel':tel}
+
+data_all_bin = pd.DataFrame(data=bin_dict)
+data_all_bin.to_csv('all_rvs_binned.csv', index=False, header=True)
+

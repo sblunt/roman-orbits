@@ -1,3 +1,4 @@
 h5py
 celerite
+toml
 git+https://github.com/sblunt/radvel.git

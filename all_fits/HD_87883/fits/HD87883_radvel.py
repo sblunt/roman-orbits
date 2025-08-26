@@ -3,7 +3,7 @@ import numpy as np
 import radvel
 
 # Load Data
-data = pd.read_csv("../data/all_rvs.csv")
+data = pd.read_csv("/roman_orbits/all_fits/HD_87883/data/all_rvs_binned.csv")
 
 # Define global planetary system
 starname = "HD87883"
@@ -54,7 +54,7 @@ for inst in instnames:
         radvel.prior.HardBounds(
             'jit_{}'.format(inst),
             0.0,
-            25.0,
+            1000.0,
         )
     )
 
