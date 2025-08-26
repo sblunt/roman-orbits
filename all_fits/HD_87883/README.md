@@ -1,4 +1,4 @@
-Sarah note: trimmed first 50% of chains. e, Msini, P consistent with Feng+ 22 and Rosenthal+ 21.
+Sarah note: trimmed first 20% of chains. e, Msini, P consistent with Feng+ 22 and Rosenthal+ 21.
 
 # HD87883 - Nick Schragal
 
