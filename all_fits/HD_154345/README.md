@@ -1,3 +1,6 @@
+Sarah: trimmed first 20% of chains. Pretty consistent results with Xiao+ 23, but we get a 
+significantly lower eccentricity.
+
 # HD154345 - Nick Schragal
 
 This folder contains two sub-folders:

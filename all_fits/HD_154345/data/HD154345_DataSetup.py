@@ -3,6 +3,8 @@ from astropy.table import Table
 from copy import deepcopy
 import toml, os
 from pprint import pprint
+import radvel
+import numpy as np
 
 #running_from_top_dir = True
 
@@ -207,4 +209,32 @@ finaldata[standard_names[3]] = finaldata[standard_names[4]].astype(str) + "-" + 
 
 print("Final set of RVs consists of {} unique data points.".format(len(finaldata)))
 
+
+# Sarah: we don't want to fit RVs from the same instrument but different pubs differently,
+# so change the separation Nick implemented above here (super clunky but oh well)
+finaldata = finaldata.rename(columns={"tel":"inst", "inst":"tel"})
+
+# Sarah: a few datapoints are given with inst 'k' -- I assume this is hires-k, and update that here
+finaldata.loc[finaldata.tel == 'k', 'tel'] = 'hiresk'
+
+# Sarah: ELODIE & SOPHIE data appear to be given in km/s
+finaldata.loc[finaldata.tel == 'elodie', 'mnvel'] *= 1000
+finaldata.loc[finaldata.tel == 'elodie', 'errvel'] *= 1000
+
+finaldata.loc[finaldata.tel == 'sophie', 'mnvel'] *= 1000
+finaldata.loc[finaldata.tel == 'sophie', 'errvel'] *= 1000
+
+# subtract off a mean value from the elodie data for easier mcmc convergence
+finaldata.loc[finaldata.tel == 'elodie', 'mnvel'] -= np.mean(finaldata.loc[finaldata.tel == 'elodie', 'mnvel'])
+finaldata.loc[finaldata.tel == 'sophie', 'mnvel'] -= np.mean(finaldata.loc[finaldata.tel == 'sophie', 'mnvel'])
+
+
 finaldata.to_csv("all_rvs.csv", index = False)
+
+time, mnvel, errvel, tel = radvel.utils.bintels(finaldata['time'].values,\
+                            finaldata['mnvel'].values,finaldata['errvel'].values,\
+                            finaldata['tel'])
+bin_dict = {'time':time, 'mnvel':mnvel, 'errvel':errvel, 'tel':tel}
+
+data_all_bin = pd.DataFrame(data=bin_dict)
+data_all_bin.to_csv('all_rvs_binned.csv', index=False, header=True)
