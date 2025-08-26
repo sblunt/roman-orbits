@@ -18,16 +18,21 @@ DATA_PATH = '../data/39091_rv_main_binned.txt'
 
 # Define planetary system parameters
 starname = 'pi Men (HD 39091)'
-nplanets = 3
-planet_letters = {1:'b', 2:'c', 3:'d'}
+nplanets = 1
+planet_letters = {1:'b'}#, 2:'c', 3:'d'}
 
 # Load RV data
 data = pd.read_csv(DATA_PATH, header=None, skiprows=1, delim_whitespace=True,
                    names=('time','mnvel','errvel','tel'))
 
+
 # Define dataset parameters
 instnames = list(np.unique(data['tel']))
 ntels = len(instnames)
+
+# Subtract off mean of each dataset for easier gamma convergence
+for inst in instnames:
+    data.loc[data.tel == inst, 'mnvel'] -= np.mean(data[data.tel == inst].mnvel)
 
 # define radvel parameters
 fitting_basis = 'per tc secosw sesinw k'
@@ -47,18 +52,18 @@ anybasis_params['w1'] = radvel.Parameter(value=5.76)  # arg of peri
 anybasis_params['k1'] = radvel.Parameter(value=196.1)  # RV semi-amp
 
 # planet 2
-anybasis_params['per2'] = radvel.Parameter(value=6.268)  # period 
-anybasis_params['tp2'] = radvel.Parameter(value=2450828.565)  # time of peri
-anybasis_params['e2'] = radvel.Parameter(value=0.077)  # eccentricity 
-anybasis_params['w2'] = radvel.Parameter(value=1.8)  # arg of peri 
-anybasis_params['k2'] = radvel.Parameter(value=1.185)  # RV semi-amp
+# anybasis_params['per2'] = radvel.Parameter(value=6.268)  # period 
+# anybasis_params['tp2'] = radvel.Parameter(value=2450828.565)  # time of peri
+# anybasis_params['e2'] = radvel.Parameter(value=0.077)  # eccentricity 
+# anybasis_params['w2'] = radvel.Parameter(value=1.8)  # arg of peri 
+# anybasis_params['k2'] = radvel.Parameter(value=1.185)  # RV semi-amp
 
-# planet 3
-anybasis_params['per3'] = radvel.Parameter(value=124.64)  # period 
-anybasis_params['tp3'] = radvel.Parameter(value=2457595.46)  # time of peri
-anybasis_params['e3'] = radvel.Parameter(value=0.220)  # eccentricity 
-anybasis_params['w3'] = radvel.Parameter(value=5.64)  # arg of peri 
-anybasis_params['k3'] = radvel.Parameter(value=1.68)  # RV semi-amp
+# # planet 3
+# anybasis_params['per3'] = radvel.Parameter(value=124.64)  # period 
+# anybasis_params['tp3'] = radvel.Parameter(value=2457595.46)  # time of peri
+# anybasis_params['e3'] = radvel.Parameter(value=0.220)  # eccentricity 
+# anybasis_params['w3'] = radvel.Parameter(value=5.64)  # arg of peri 
+# anybasis_params['k3'] = radvel.Parameter(value=1.68)  # RV semi-amp
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -73,6 +78,7 @@ for tel in instnames:
         value=data.loc[data['tel']==tel, 'mnvel'].mean()
         )   # velocity zero-point
     
+
 # Convert input orbital parameters into the fitting basis
 params = anybasis_params.basis.to_any_basis(anybasis_params,fitting_basis)
 
@@ -104,7 +110,7 @@ priors = [
     radvel.prior.PositiveKPrior(nplanets),       # Keeps K > 0
 ]
 for tel in instnames:
-    priors.append(radvel.prior.HardBounds('jit_' + tel, 0.0, 20.0))
+    priors.append(radvel.prior.HardBounds('jit_' + tel, 0.0, 50.0))
 
 # abscissa for slope and curvature terms 
 # (should be near mid-point of time baseline)
