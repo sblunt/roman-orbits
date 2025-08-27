@@ -3,7 +3,7 @@ import numpy as np
 import radvel
 
 # Load Data
-data = pd.read_csv("../data/all_rvs.csv")
+data = pd.read_csv("../data/all_rvs_binned.csv")
 
 # Define global planetary system
 starname = "HD160691"
@@ -59,7 +59,7 @@ anybasis_params['curv'] = radvel.Parameter(value = 0.0)
 # Check this. I have split up each published data set by publication.
 # So there are multiple hires_j's, for example, one per publication.
 for inst in instnames:
-    anybasis_params['gamma_{}'.format(inst)] = radvel.Parameter(value = 0)
+    anybasis_params['gamma_{}'.format(inst)] = radvel.Parameter(value=np.mean(data.mnvel.values[data.tel==inst]))
 for inst in instnames:
     anybasis_params['jit_{}'.format(inst)] = radvel.Parameter(value = 5)
 
@@ -73,13 +73,12 @@ priors = [
     radvel.prior.PositiveKPrior(nplanets),
 ]
 # Adding instrument-specific hardbounds priors for jitter
-# Setting all hardbounds to 0 to 25 m/s for now
 for inst in instnames:
     priors.append(
         radvel.prior.HardBounds(
             'jit_{}'.format(inst),
             0.0,
-            25.0,
+            2000.,
         )
     )
 

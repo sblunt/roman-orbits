@@ -1,8 +1,5 @@
-#!/bin/bash
-
-radvel fit -s HD160691_radvel.py
-radvel mcmc -s HD160691_radvel.py --nwalkers=128
-radvel derive -s HD160691_radvel.py 
-radvel plot -t rv derived corner trend -s HD160691_radvel.py
-radvel ic -t nplanets e trend jit -s HD160691_radvel.py
-radvel report -s HD160691_radvel.py
+radvel fit -s HD160691_radvel.py -d results
+radvel plot -t rv -s HD160691_radvel.py -d results
+# radvel mcmc -s HD160691_radvel.py -d results
+# radvel derive -s HD160691_radvel.py -d results
+# radvel plot -t rv trend derived corner -s HD160691_radvel.py -d results
