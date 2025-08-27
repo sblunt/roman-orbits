@@ -20,9 +20,10 @@ RUN mkdir /roman_orbits && \
 WORKDIR /roman_orbits
 COPY requirements.txt /roman_orbits
 
+RUN pip install -r requirements.txt
+
 # uncomment to include a dev version of radvel into the container (radvel must be in path)
 # COPY radvel /roman_orbits
 
-RUN pip install -r requirements.txt
 COPY all_fits /roman_orbits
 RUN chmod -R 755 /roman_orbits/*
