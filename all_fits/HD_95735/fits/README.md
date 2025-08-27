@@ -1,0 +1,2 @@
+HD 95735 b orbital params come from: https://www.aanda.org/articles/aa/pdf/2019/05/aa35019-19.pdf
+HD 95735 c params come from: https://iopscience.iop.org/article/10.3847/1538-4365/abe23c/meta#apjsabe23cf6
