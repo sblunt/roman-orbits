@@ -1,4 +1,4 @@
-time,mnvel,errvel,tel,inst,source
+time,mnvel,errvel,inst,tel,source
 2450915.2911,-18.8,5.1,ucles-mccarthy2004,ucles,mccarthy2004
 2450915.29395,-6.6,2.24,ucles-laliotis2023,ucles,laliotis2023
 2451118.88482,15.08,1.27,ucles-laliotis2023,ucles,laliotis2023
