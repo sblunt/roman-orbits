@@ -1,0 +1,1 @@
+Parameters consistent with Rosenthal+ 21. Trimmed first 50% of chains.
