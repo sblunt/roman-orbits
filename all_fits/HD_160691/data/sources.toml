@@ -33,26 +33,6 @@ L = "lick"
 col = "Name"
 name = "mu Ara"
 
-[pepe2007h]
-fname = "pepe2007h.tex"
-format = "ascii.latex"
-jd_name = "jd"
-rv_name = "rv"
-e_rv_name = "e_rv"
-jd_offset = 2400000
-is_survey = false
-inst_new = "harps"
-
-[pepe2007c]
-fname = "pepe2007c.tex"
-format = "ascii.latex"
-jd_name = "jd"
-rv_name = "rv"
-e_rv_name = "e_rv"
-jd_offset = 2400000
-is_survey = false
-inst_new = "coralie"
-
 [benedict2022]
 fname = "benedict2022.txt"
 format = "ascii.cds"
@@ -65,10 +45,10 @@ is_survey = false
 inst_col.col = "Source"
 
 [benedict2022.inst_col.names]
-"11" = "harps"
+"11" = "harps0"
 "12" = "coralie"
 "14" = "ucles"
-"15" = "harps"
+"15" = "harps1"
 
 [laliotis2023]
 fname = "laliotis2023.csv"

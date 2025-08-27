@@ -55,9 +55,7 @@ anybasis_params['k4'] = radvel.Parameter(value = 22.18)
 anybasis_params['dvdt'] = radvel.Parameter(value = 0.0)
 anybasis_params['curv'] = radvel.Parameter(value = 0.0)
 
-# Adding instrument rv offset and jitter parameters (assuming 5 m/s for all for now)
-# Check this. I have split up each published data set by publication.
-# So there are multiple hires_j's, for example, one per publication.
+# Adding instrument rv offset and jitter parameters
 for inst in instnames:
     anybasis_params['gamma_{}'.format(inst)] = radvel.Parameter(value=np.mean(data.mnvel.values[data.tel==inst]))
 for inst in instnames:
