@@ -75,7 +75,7 @@ for inst in instnames:
     priors.append(
         radvel.prior.HardBounds(
             'jit_{}'.format(inst),
-            0.0,
+            0.1,
             2000.,
         )
     )
