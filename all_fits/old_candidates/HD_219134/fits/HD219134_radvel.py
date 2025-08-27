@@ -6,6 +6,8 @@ from radvel.orbit import timeperi_to_timetrans
 # Load Data
 data = pd.read_csv("../data/all_rvs_binned.csv")
 
+three_planet = True # if True, only fit for the inner two transiting planets & outer long-period planet
+
 # Define global planetary system
 starname = "HD219134"
 nplanets = 6
