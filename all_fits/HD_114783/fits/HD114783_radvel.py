@@ -33,8 +33,6 @@ anybasis_params["k2"] = radvel.Parameter(value=9.21)  # velocity semi-amplitude 
 
 ####################################
 
-# need to update
-
 
 anybasis_params["dvdt"] = radvel.Parameter(value=0.0)  # slope
 anybasis_params["curv"] = radvel.Parameter(value=0.0)  # curvature
@@ -77,14 +75,13 @@ data = pd.read_csv(
 
 # Define prior shapes and widths here.
 
-## need to change ?
 priors = [
     radvel.prior.EccentricityPrior(nplanets),  # Keeps eccentricity < 1
     radvel.prior.PositiveKPrior(nplanets),  # Keeps K > 0
-    radvel.prior.HardBounds("jit_HIRES-pre", 0.0, 10.0),
-    radvel.prior.HardBounds("jit_HIRES-post", 0.0, 10.0),
-    radvel.prior.HardBounds('jit_HARPS-pre', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_HARPS-post', 0.0, 10.0)
+    radvel.prior.HardBounds("jit_HIRES-pre", 0.1, 10.0),
+    radvel.prior.HardBounds("jit_HIRES-post", 0.1, 10.0),
+    radvel.prior.HardBounds('jit_HARPS-pre', 0.1, 10.0),
+    radvel.prior.HardBounds('jit_HARPS-post', 0.1, 10.0)
 ]
 
 # abscissa for slope and curvature terms (should be near mid-point of time baseline)
