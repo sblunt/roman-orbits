@@ -38,19 +38,12 @@ data1_apf["tel"] = "APF"
 data2 = pd.read_csv(
     path2,
     header=None,
-    skiprows=17,
+    skiprows=40,
     delim_whitespace=True,
-    usecols=[2,3,6,7],
-    names=('mnvel', 'errvel', 'mjd', 'time'),
+    usecols=[0,1,2],
+    names=('time', 'mnvel', 'errvel'),comment="#"
 )
-# convert mjd to bjd for observations with nan bjd
-for i, (bjd, mjd) in enumerate(zip(data2['time'].values, data2['mjd'].values)):
-     if np.isnan(bjd):
-         data2['time'].iloc[i] = mjd + 2400000
-# drop unneccesary labels
-data2 = data2.drop(columns='mjd')
-# drop observations with nan errvel
-data2 = data2.drop(index=np.where(np.isnan(data2['errvel']))[0])
+
 # convert RV measurements in km/s to m/s
 data2["mnvel"] *= 1000  
 data2["errvel"] *= 1000 
@@ -60,8 +53,12 @@ data2["tel"] = "SOPHIE"
 
 ########################################################################################
 # data concatenation and optionally do nightly bin of all data sources
-dataframe = [data2, data1_ham, data1_pre, data1_post, data1_apf]
+# leave out HIRES pre-upgrade and Hamilton data
+# (ref Rosenthal+ 21 section A5: detectors are too low res for M dwarfs)
+dataframe = [data1_post, data1_apf, data2]
 data_all = pd.concat(dataframe, ignore_index=True)
+
+
 data_all.to_csv(
     "HD95735_rv_combined_unbinned.txt",
     sep="\t",
