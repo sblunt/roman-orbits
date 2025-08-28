@@ -19,8 +19,7 @@ anybasis_params = radvel.Parameters(
 )  # initialize Parameters object
 
 anybasis_params["per1"] = radvel.Parameter(value=493.7)  # period of 1st planet
-anybasis_params["tp1"] = radvel.Parameter(value=2453806)
-)  # time of periastron of 1st planet
+anybasis_params["tp1"] = radvel.Parameter(value=2453806)  # time of periastron of 1st planet
 anybasis_params["e1"] = radvel.Parameter(value=0.144)  # eccentricity of 'per tp secosw sesinw k'1st planet
 anybasis_params["w1"] = radvel.Parameter(value=86 * (np.pi/180))  # argument of periastron of the star's orbit for 1st planet
 anybasis_params["k1"] = radvel.Parameter(value=31.9)  # velocity semi-amplitude for 1st planet
