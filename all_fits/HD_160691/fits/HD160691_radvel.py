@@ -14,9 +14,9 @@ fitting_basis = 'per tc secosw sesinw k'
 bjd0 = 2440000.
 planet_letters = {
     1:'b',
-    2:'c',
-    3:'d',
-    4:'e',
+    2:'d',
+    3:'e',
+    4:'c',
 }
 
 anybasis_params = radvel.Parameters(
