@@ -95,12 +95,12 @@ data = pd.read_csv(path,header=None,skiprows=1,delim_whitespace=True,names=('tim
 priors = [
     radvel.prior.EccentricityPrior(nplanets),           # Keeps eccentricity < 1
     radvel.prior.PositiveKPrior(nplanets),             # Keeps K > 0
-    radvel.prior.HardBounds('jit_ELODIE', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_HJS', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_HRS', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_Hamilton', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_HIRES-post', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_APF', 0.0, 10.0)
+    radvel.prior.HardBounds('jit_ELODIE', 0.0, 200.0),
+    radvel.prior.HardBounds('jit_HJS', 0.0, 200.0),
+    radvel.prior.HardBounds('jit_HRS', 0.0, 200.0),
+    radvel.prior.HardBounds('jit_Hamilton', 0.0, 200.0),
+    radvel.prior.HardBounds('jit_HIRES-post', 0.0, 200.0),
+    radvel.prior.HardBounds('jit_APF', 0.0, 200.0)
 ]
 
 # abscissa for slope and curvature terms (should be near mid-point of time baseline)

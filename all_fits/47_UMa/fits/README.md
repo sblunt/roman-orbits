@@ -1,5 +1,6 @@
-Include scripts here to run orbit-fits. This should be (e.g. for radvel) both 
-setup files, final model report, and bash scripts that run things like `radvel fit` and `radvel mcmc`
-in order to make it as easily reproducible as possible. We should call our script
-that runs our "adopted" fit "run_orbit.sh" to make it easy to (for example) collect and 
-re-run all the fits at once for all targets.
+Trimmed first 75% of chains. Period of farthest companion could stand to be 
+slightly more converged but not much-- it's a long tail and I believe overall 
+it's sampled well. Parameters agree well with Rosenthal+ 21 but our period 
+posterior for d is broader, which makes sense to me because I ran the chains
+longer than generic radvel would have. This slightly changes the parameter
+dists for the inner planets too much not much.
