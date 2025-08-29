@@ -125,16 +125,17 @@ priors = [
     #radvel.prior.Gaussian('k4', params['k4'].value, 0.24),
     #radvel.prior.Gaussian('per5', params['per5'].value, 0.24),
     #radvel.prior.Gaussian('k5', params['k5'].value, 0.27),
-    radvel.prior.HardBounds('jit_HJS', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_HRS', 0.0, 10.0),
-    #radvel.prior.HardBounds('jit_ELODIE', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_Hamilton', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_HIRES-pre', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_HIRES-post', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_APF', 0.0, 10.0),
-    #radvel.prior.HardBounds('jit_HARPS', 0.0, 10.0)
-    radvel.prior.HardBounds('jit_HARPS-N', 0.0, 10.0),
-    radvel.prior.HardBounds('jit_SOPHIE', 0.0, 10.0)
+    radvel.prior.HardBounds('jit_HJS', 0.1, 100),
+    radvel.prior.HardBounds('jit_HRS', 0.1, 100),
+    #radvel.prior.HardBounds('jit_ELODIE', 0.1, 100),
+    radvel.prior.HardBounds('jit_Hamilton', 0.1, 100),
+    radvel.prior.HardBounds('jit_HIRES-pre', 0.1, 100),
+    radvel.prior.HardBounds('jit_HIRES-post', 0.1, 100),
+    radvel.prior.HardBounds('jit_APF', 0.1, 100),
+    #radvel.prior.HardBounds('jit_HARPS', 0.1, 100)
+    radvel.prior.HardBounds('jit_HARPS-N', 0.1, 100),
+    radvel.prior.HardBounds('jit_SOPHIE', 0.1, 100),
+    radvel.prior.HardBounds('jit_HARPS', 0.1, 100)
 ]
 
 # abscissa for slope and curvature terms (should be near mid-point of time baseline)
