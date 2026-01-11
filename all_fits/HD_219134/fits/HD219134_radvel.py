@@ -10,7 +10,7 @@ three_planet = True  # if True, only fit for the inner two transiting planets & 
 
 # Define global planetary system
 starname = "HD219134"
-nplanets = 6
+nplanets = 5
 instnames = list(np.unique(data["tel"]))
 ntels = len(instnames)
 fitting_basis = "per tc secosw sesinw k"
@@ -19,9 +19,9 @@ planet_letters = {
     1: "b",
     2: "c",
     3: "d",
-    4: "f",
-    5: "g",
-    6: "h",
+    # 4: "f",
+    4: "g",
+    5: "h",
 }
 
 anybasis_params = radvel.Parameters(
@@ -48,15 +48,15 @@ anybasis_params["k2"] = radvel.Parameter(value=1.44)  # Rosenthal+ 21
 
 # f: This is the controversial planet (params from Vogt+ 15): controversy
 # comes from identical period in S-indices (reported by Johsnon+ 2016).
-# I (Sarah) think it's fine to fit for this even if it is stellar activity.
-# Could stand to think about this more, but I doubt it affects the outer planet
-# params
-tc4 = timeperi_to_timetrans(2449983, 22.805, 0.0720, 10.0 * np.pi / 180.0)
-anybasis_params["per4"] = radvel.Parameter(value=22.805)
-anybasis_params["tc4"] = radvel.Parameter(value=tc4)
-anybasis_params["e4"] = radvel.Parameter(value=0.01)
-anybasis_params["w4"] = radvel.Parameter(value=10.0 * np.pi / 180.0)
-anybasis_params["k4"] = radvel.Parameter(value=2.3)
+# I originally fit for it, but the favored eccentricity was quite high,
+# confirming my suspicion that it's likely stellar activity. I decided
+# to leave it out and let the jitter absorb it.
+# tc6 = timeperi_to_timetrans(2449983, 22.805, 0.0720, 10.0 * np.pi / 180.0)
+# anybasis_params["per6"] = radvel.Parameter(value=22.805)
+# anybasis_params["tc6"] = radvel.Parameter(value=tc6)
+# anybasis_params["e6"] = radvel.Parameter(value=0.01)
+# anybasis_params["w6"] = radvel.Parameter(value=10.0 * np.pi / 180.0)
+# anybasis_params["k6"] = radvel.Parameter(value=2.3)
 
 # d: Vogt+ 15
 tc3 = timeperi_to_timetrans(2449964, 46.71, 0, 0)
@@ -67,20 +67,20 @@ anybasis_params["w3"] = radvel.Parameter(value=10.0 * np.pi / 180.0)
 anybasis_params["k3"] = radvel.Parameter(value=4.4)
 
 # g: Vogt+ 15
-tc5 = timeperi_to_timetrans(2449972, 94.2, 0, 0)
-anybasis_params["per5"] = radvel.Parameter(value=94.2)
-anybasis_params["tc5"] = radvel.Parameter(value=tc5)
-anybasis_params["e5"] = radvel.Parameter(value=0.01)
-anybasis_params["w5"] = radvel.Parameter(value=10 * np.pi / 180.0)
-anybasis_params["k5"] = radvel.Parameter(value=1.8)
+tc4 = timeperi_to_timetrans(2449972, 94.2, 0, 0)
+anybasis_params["per4"] = radvel.Parameter(value=94.2)
+anybasis_params["tc4"] = radvel.Parameter(value=tc4)
+anybasis_params["e4"] = radvel.Parameter(value=0.01)
+anybasis_params["w4"] = radvel.Parameter(value=10 * np.pi / 180.0)
+anybasis_params["k4"] = radvel.Parameter(value=1.8)
 
 # h: Vogt+ 15
-tc6 = timeperi_to_timetrans(2448725.0, 22047, 0, 0)
-anybasis_params["per6"] = radvel.Parameter(value=2247.0)
-anybasis_params["tc6"] = radvel.Parameter(value=tc6)
-anybasis_params["e6"] = radvel.Parameter(value=0.025)
-anybasis_params["w6"] = radvel.Parameter(value=0.0 * np.pi / 180.0)
-anybasis_params["k6"] = radvel.Parameter(value=5.73)
+tc5 = timeperi_to_timetrans(2448725.0, 22047, 0, 0)
+anybasis_params["per5"] = radvel.Parameter(value=2247.0)
+anybasis_params["tc5"] = radvel.Parameter(value=tc5)
+anybasis_params["e5"] = radvel.Parameter(value=0.025)
+anybasis_params["w5"] = radvel.Parameter(value=0.0 * np.pi / 180.0)
+anybasis_params["k5"] = radvel.Parameter(value=5.73)
 
 anybasis_params["dvdt"] = radvel.Parameter(value=0.0)
 anybasis_params["curv"] = radvel.Parameter(value=0.0)
